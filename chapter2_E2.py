@@ -22,7 +22,7 @@ def guess(winner_gender):
     else:
         fishers = male_fishers
 
-    # write your solution here
+
     biggest = (0)
     guess = ()
 

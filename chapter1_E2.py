@@ -45,11 +45,10 @@ def permutations(route, ports):
             permutations(new_route, new_ports)
 
 def main():
-    # Do not edit any (global) variables using this function, as it will mess up the testing
     # this will start the recursion
     permutations([0], list(range(1, len(portnames))))
 
-    # print the best route and its emissions
+    # prints the best route and its emissions
     print(' '.join([portnames[i] for i in bestroute]) + " %.1f kg" % smallest)
 
 main()

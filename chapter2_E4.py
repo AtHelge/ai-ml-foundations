@@ -26,13 +26,14 @@ def bayes(sequence):
     odds = 1.0           # start with odds 1:1
     for roll in sequence:
         if roll==6:
-            r=0.5/0.167             # edit here to update the odds
+            r=0.5/0.167           
             odds=odds*r
         else:
             r=0.1/0.167
             odds=odds*r
     if odds > 1:
         return True
+
     else:
         return False
 

@@ -26,7 +26,7 @@ def main():
     global y
 
     for step in range(steps):
-        # add a temperature schedule here
+        #temperature schedule
         T =  max(0,((steps-step)/steps)**3-.005)
 
         
@@ -38,7 +38,7 @@ def main():
             S_old = h[x[i], y[i]]
             S_new = h[x_new, y_new]
 
-            # change this to use simulated annealing
+            # simulated annealing
             if S_new > S_old:
                 x[i], y[i] = x_new, y_new   # new solution is better, go there       
             

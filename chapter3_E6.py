@@ -36,21 +36,19 @@ def main(X_train, X_test, y_train, y_test):
     global y_predict
     global lines
 
-    k = 3    # classify our test items based on the classes of 3 nearest neighbors
+    k = 3 
 
     # process each of the test data points
     for i, test_item in enumerate(X_test):
+
         # calculate the distances to all training points
         distances = [dist(train_item, test_item) for train_item in X_train]
 
-        # add your code here
         nearest= np.argmin(distances)
-        three_nearest = np.argsort(distances)[:3]       # this just finds the nearest neighbour (so k=1)
+        three_nearest = np.argsort(distances)[:3]       # this just finds the nearest neighbours
 
         print(three_nearest)
-        # create a line connecting the points for the chart
-        # you may change this to do the same for all the k nearest neigbhors if you like
-        # but it will not be checked in the tests
+        
         lines.append(np.stack((test_item, X_train[nearest])))
 
         count=0
@@ -67,7 +65,7 @@ def main(X_train, X_test, y_train, y_test):
             predicted_class=1
         else:
             predicted_class=0 
-        y_predict[i] = predicted_class          # this just classifies everything as 0
+        y_predict[i] = predicted_class        
     
     print(y_predict)
 

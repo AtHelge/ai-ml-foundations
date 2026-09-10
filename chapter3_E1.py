@@ -1,10 +1,9 @@
 
 
-#using numpy -> easy match of integers for indizez and multiply and sum of all
-
 
 import numpy as np
 
+# x as feature values for three cabins
 X = np.array([[66, 5, 15, 2, 500], 
               [21, 3, 50, 1, 100], 
               [120, 15, 5, 2, 1200]])
